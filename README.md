@@ -6,8 +6,8 @@ QuizForge is an interactive quiz application developed using Java. The project a
 - Multiple-choice quiz system
 - Score calculation
 - Simple and interactive UI
-- Fast quiz navigation
 - Beginner-friendly application structure
+- Timer functionality
 
 # Tech Stack
 - Java
@@ -15,7 +15,6 @@ QuizForge is an interactive quiz application developed using Java. The project a
 - NetBeans
 
 # Future Improvements
-- Timer functionality
 - Database integration
 - User authentication
 - Leaderboard system

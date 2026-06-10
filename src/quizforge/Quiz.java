@@ -355,13 +355,14 @@ public class Quiz extends JFrame implements ActionListener{
             count++;
             start(count);
         }else if(ae.getSource() == elimination){
-            if(count==2 || count==4 || count==6 || count==8 || count==9){
-                opt2.setEnabled(false);
-                opt3.setEnabled(false);
-            }else{
-                opt1.setEnabled(false);
-                opt4.setEnabled(false);
-            }
+            java.util.List<JRadioButton> wrongOptions = new java.util.ArrayList<>();
+            if (!opt1.getText().equals(answers[count][1])) wrongOptions.add(opt1);
+            if (!opt2.getText().equals(answers[count][1])) wrongOptions.add(opt2);
+            if (!opt3.getText().equals(answers[count][1])) wrongOptions.add(opt3);
+            if (!opt4.getText().equals(answers[count][1])) wrongOptions.add(opt4);
+            java.util.Collections.shuffle(wrongOptions);
+            wrongOptions.get(0).setEnabled(false);
+            wrongOptions.get(1).setEnabled(false);
             elimination.setEnabled(false);
         }else if(ae.getSource() == submit){
             ans_given = 1;
